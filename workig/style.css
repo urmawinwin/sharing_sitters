@@ -1,0 +1,688 @@
+* {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif, "Montserrat", sans-serif;
+}
+
+.four img {
+  width: 140px;
+  margin: 0;
+  padding: 0;
+}
+
+.slider {
+  margin: 0;
+  padding: 0;
+}
+
+.alert__app {
+  position: fixed;
+  right: 80px;
+  bottom: 100px;
+  transition: all 0.1s ease-in-out;
+  background-color: yellow;
+  border-radius: 40px;
+  padding: 20px 30px;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.alert__app:hover {
+  box-shadow: 0 6px 14px 0 rgb(73, 73, 73);
+  transform: scale(1.05);
+}
+
+.talk {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  width: 60px;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.top-of-top {
+  height: 40px;
+  width: 100%;
+  background-color: rgb(168, 209, 168);
+}
+
+body {
+  /* background-color: white; */
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+  height: auto;
+  flex-wrap: wrap;
+  top: 0;
+}
+
+.newbi-event-bar {
+  z-index: 100;
+  background-color: rgb(24, 169, 226);
+  /* padding: 20px 0; */
+  /* width: 100%; */
+  /* position: absolute; */
+  top: 0;
+  position: sticky;
+  /* z-index: 100; */
+  /*z-index 해줘야 스코롤 내려도 보여짐*/
+  /* min-width: 100%; */
+  /* height: 35px; */
+  text-align: center;
+  padding: 15px;
+}
+
+/*_____시작 - 헤더작업____*/
+
+.sticky2 {
+  position: sticky;
+  z-index: 100;
+  /*z-index 해줘야 스코롤 내려도 보여짐*/
+  min-width: 100%;
+  /* height: 40px; */
+  top: 0;
+  left: 0;
+  /* flex-wrap: nowrap; */
+  /* white-space: nowrap; */
+  /* margin: 0 100px 0 27px; */
+  background-color: rebeccapurple;
+}
+
+h2 {
+  display: inline-block;
+}
+
+header {
+  /* position: relative; */
+  /* flex-wrap: nowrap; */
+  /* max-width: 1384px;
+    min-width: 1014px; */
+  /* height: 100%; */
+  /* margin: 0 auto; */
+  /* z-index: 200; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  /* margin-top: 50px; */
+  background-color: skyblue;
+  /* background-color: rgb(102, 185, 102); */
+  transition: 0.6s;
+  /* padding: 5px 0; */
+  padding: 10px 0;
+}
+/*  */
+/*header 높낮이 패딩을 주니까 scroll 길이가 맞네*/
+/*  */
+
+header.sticky {
+  background-color: white;
+  padding: 20px 0;
+  /* min-width: 100%; */
+  /* height: 50px; */
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
+.header__logo {
+  margin-left: 230px;
+}
+
+.d {
+  padding-right: 230px;
+}
+
+.header-1 {
+  margin-right: 30px;
+  border-radius: 20px;
+  padding: 8px 15px;
+  /* background-color: paleturquoise; */
+  background-color: #dae2fd;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.header__logo,
+.header-1,
+.header-2 {
+}
+
+.header-1:hover {
+  background-color: rgb(41, 188, 247);
+  transition: all 0.9s;
+}
+
+/* ㅡㅡㅡㅡㅡㅡㅡㅡㅡ !menu ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
+
+menu {
+  /* text-align: center; */
+  flex-wrap: wrap;
+}
+
+menu a {
+  text-decoration: none;
+  color: #020202;
+  padding-right: 60px;
+  /* z-index: 5555555; */
+  /* font-weight: bold; */
+}
+
+.meue__pt {
+  display: flex;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  background-color: white;
+  /* padding: 0 160px 10px 140px; */
+  /* margin-top: 65px; */
+  border-top: 1px solid rgb(231, 231, 231);
+  /* border-bottom: 1px solid rgb(231, 231, 231); */
+  width: 100%;
+  color: grey;
+  padding-left: 230px;
+  padding-right: 200px;
+}
+
+menu li {
+  cursor: pointer;
+  padding: 10px 0;
+  color: rgb(36, 150, 36);
+  /* font-weight: bold; */
+  font-size: 16px;
+  flex-wrap: wrap;
+}
+
+li {
+  color: #424242;
+}
+
+/*
+  .drop_nomal li:last-child,
+  .drop_second__mega li:last-child {
+    border-radius: 0 0 5px 5px;
+  }
+  
+  menu .drop_nomal li:hover,
+  .drop_second__mega li:hover {
+    background-color: gainsboro;
+  }
+  */
+
+.list__first {
+  position: relative;
+}
+/*드롭바 2차 메뉴 ul 의 유령집*/
+
+.drop_nomal {
+  display: none;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  z-index: 200;
+  flex-wrap: wrap;
+}
+/*드롭바인 2차 메뉴 보이면 안되니까 display:none*/
+
+.drop_nomal li {
+  background-color: white;
+  opacity: 0.7;
+  transition: all 0.9s;
+  font-size: 16px;
+  width: 100px;
+  height: 100px;
+  text-align: left;
+  /* font-weight: 600; */
+  border-bottom: 1px solid gainsboro;
+  padding: 10px 0 0 10px;
+}
+
+.drop_nomal li:hover {
+  color: rgb(41, 188, 247);
+}
+
+.list__first:hover > ul {
+  display: block;
+}
+
+/*li 에다가 마우스 올렸을때 그 밑 ul 에다가
+  block 나오며 전체 ul 높이가 늘어나서 
+  주변에 영향을 미치게되는게싫으니
+  드롭바인 2차 메뉴 ul 을 absoute 유령으로 만듬
+  유령으로 만들면 나타나고 사라질때
+  주변에 영향을 안미치게됨
+  */
+
+/* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ!메가메뉴ㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
+nav {
+  background-color: #424242;
+  font-size: 0;
+  position: relative;
+}
+nav > ul > li {
+  display: inline-block;
+  font-size: 14px;
+  /* padding: 10px -10px; */
+  position: relative;
+}
+/*
+  nav > ul > li:first-child {
+    padding-left: 0;
+  }
+  nav > ul > li:last-child {
+    padding-right: 0;
+  }
+  */
+
+.meue__pt {
+  /* margin-top: 75px; */
+}
+
+nav > ul > li > a {
+  color: rgb(34, 33, 33);
+  display: block;
+  position: relative;
+  /* padding: 10px 0; */
+  border-bottom: 3px solid transparent;
+  font-size: 15px;
+  letter-spacing: -1px;
+}
+nav > ul > li:hover > a {
+  color: #69aae0;
+  border-bottom: 3px solid #69aae0;
+}
+
+.ul-reset {
+  /* padding-left: 170px; */
+  /* margin-top: 10px; */
+  /* margin-bottom: 0; */
+  list-style: none;
+}
+
+.ul-reset li {
+  padding: 0;
+  margin: 0;
+}
+
+.container_cf {
+  padding: 10px 100px 10px 300px;
+}
+
+/* #Menu inner item
+  -------------------------------------------------*/
+
+.inner_img {
+  width: 380px;
+  padding-top: 20px;
+}
+
+/* #Mega Menu Styles
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+.mega__menu {
+  background: #f0f0f0;
+  /* background: yellow; */
+  display: none;
+  left: 0;
+  top: 40px;
+  position: absolute;
+  text-align: left;
+  width: 100%;
+  height: 380px;
+  z-index: 80;
+}
+.mega__menu h3 {
+  color: #444;
+}
+.mega__menu ul {
+  float: left;
+  /* margin-bottom: 20px; */
+  margin-right: 40px;
+  width: 205px;
+}
+.mega__menu ul:last-child {
+  margin-right: 0;
+}
+.mega__menu a {
+  border-bottom: 1px solid #ddd;
+  color: #4ea3d8;
+  display: block;
+  padding: 10px 0;
+}
+.mega__menu a:hover {
+  color: #2d6a91;
+}
+/* #Droppable Class Styles
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.droppable {
+  position: static;
+}
+.droppable > a:after {
+  content: "  ";
+  font-family: FontAwesome;
+  font-size: 12px;
+  padding-left: 6px;
+  position: relative;
+  /* top: -1px; */
+}
+.droppable:hover .mega__menu {
+  display: block;
+}
+
+/* */
+/*끝__드롭 메가메뉴*/
+/* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
+
+.service_wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 960px;
+  align-items: center;
+}
+
+.service_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.service_item img {
+  width: 80px;
+}
+
+.service_item,
+.icon_a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #020202;
+}
+
+.service_icon_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+}
+
+.service_icon_container:hover {
+  border: 3px solid black;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.service_name {
+  margin-top: 10px;
+}
+
+.f-left {
+  float: left;
+}
+/*끝__메인-아이콘-리스트_____________________________*/
+
+.list__two {
+  font-weight: bold;
+}
+
+.list__three {
+  font-size: 15px;
+}
+
+/*시작_메인 이미지*/
+
+.slider {
+  width: 100%;
+  height: 260px;
+  /* background-color: rgb(109, 218, 132); */
+  position: relative;
+  font-size: 30px;
+  /* border-bottom: 1px solid black; */
+}
+
+.slider img {
+  opacity: 1;
+  /* object-fit: cover; */
+  position: absolute;
+  top: 0%;
+  left: 15%;
+  height: 250px;
+  z-index: -999;
+  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
+  /* border-radius: 40px; */
+}
+
+/*
+  .slider img {
+    position: absolute;
+    top: 16%;
+    left: 50%;
+    width: 30%;
+    z-index: 0;
+    border-radius: 10%;
+  }
+  */
+
+.slider-text-1 {
+  position: absolute;
+  top: 12%;
+  left: 18%;
+  font-weight: 400;
+  font-size: 30px;
+  display: block;
+  /* z-index: 10; */
+  color: black;
+}
+
+.slider-text-2 {
+  position: absolute;
+  top: 25%;
+  left: 18%;
+  font-weight: bold;
+  font-size: 30px;
+  color: black;
+  font-weight: 400;
+}
+
+.video {
+  position: absolute;
+  top: 40%;
+  left: 17%;
+  font-weight: bold;
+  font-size: 15px;
+  /* color: skyblue; */
+  /* border: 2px solid skyblue; */
+  border-radius: 40px;
+  padding: 4px 14px;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+.video span {
+  font-size: 18px;
+}
+
+.video:hover {
+  background-color: rgb(165, 97, 42);
+  transition: 0.8s;
+}
+
+.video2 {
+  /* background-color: paleturquoise; */
+  border-radius: 20px;
+  position: absolute;
+  top: 76%;
+  left: 12%;
+  /* right: 15%; */
+  width: 330px;
+  /* height: 300px; */
+  padding: 10px 15px;
+  box-sizing: border-box;
+  letter-spacing: -2px;
+  font-size: 17px;
+  cursor: pointer;
+}
+/*끝__섹션1*/
+
+/* .two, */
+
+.four,
+.for {
+  height: 100vh;
+  width: 100%;
+}
+
+.four,
+.six,
+.for {
+  background: rgb(13, 194, 89);
+}
+
+.five,
+.eight {
+  background: gold;
+}
+
+/*  */
+/* 시작__섹션2 */
+/*  */
+
+/*
+  .two {
+    z-index: 1000000px;
+  }
+  
+  .banner video {
+    width: 100%;
+    height: 100%;
+    /* z-index: 1000000px;
+  } */
+
+/*  */
+/* 시작__섹션3 */
+/*  */
+
+.slider__ul img {
+  width: 500px;
+}
+
+.slider__ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 20%;
+  left: 30%;
+}
+
+/*  */
+/* 시작__섹션4 */
+/* 구성__슬라이더 */
+/*  */
+
+.four {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  /* background-color: orange; */
+  /*└ 리스트가 나열되면서 발생하는 가로 스크롤을 막기위해*/
+  /*위아래 아니면 overflow-x*/
+}
+
+.slider_container {
+  position: absolute;
+  /*└ 리스트 하나하나 움직이는게 아니라 ul 자체가 움직이니까*/
+  left: 0;
+  width: 100%;
+  /* background-color: rebeccapurple; */
+}
+
+.sl_review {
+  position: absolute;
+  width: 100%;
+  padding: 0 10%;
+  box-sizing: border-box;
+  text-align: center;
+  overflow: hidden;
+  top: 50%;
+  transform: translateY(-50%);
+  /* background-color: aqua; */
+}
+
+/*
+    width: 100%;
+    padding: 0 10%;
+    box-sizing: border-box;
+    /*└ 위드값 있는 상태에서 패딩 주면 보더 생기니까*/
+/* top: 50%; */
+/* transform: translateY(-50%); */
+/*-텍스트들 높이가 다르더라도 중앙에 놓으려고
+    text-align: center;
+    overflow: hidden;
+    background-color: aqua;
+  }
+  */
+
+.four-slider-container .animated {
+  -webkit-transition: left 0.3s ease-in;
+  transition: left 0.3s ease-in;
+}
+
+/* Nav */
+#prev,
+#next {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  z-index: 9;
+  display: inline-block;
+  height: 5em;
+  width: 5em;
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+  background-color: blue;
+}
+
+#prev.disabled,
+#next.disabled {
+  display: none;
+}
+
+/*  */
+/* 시작__섹션4 */
+/* 구성__카드 슬라이더 */
+/*  */
+
+.card_slider {
+  position: absolute;
+  left: 100px;
+  top: 100px;
+}
+
+#prev {
+  background-image: url("arrow-left-out.svg");
+  margin-left: -480px;
+}
+
+#prev:hover {
+  /* background-image: url("arrow-left-over.svg"); */
+  background-color: #020202;
+}
+
+#next {
+  margin-left: 380px;
+  background-image: url("arrow-right-out.svg");
+}
+
+#next:hover {
+  /* background-image: url("arrow-right-over.svg"); */
+  background-color: #020202;
+}
